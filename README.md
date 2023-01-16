@@ -32,9 +32,7 @@
 - [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
-<!-- PROJECT DESCRIPTION -->
-
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 [Gym Instructor API] <a name="about-project"></a>
 
 > Describe your project in 1 or 2 sentences.
 
@@ -131,11 +129,14 @@ bundle exec rspec
 - GitHub: [@paulonchera](https://github.com/Paul-js-hub)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/paul-onchera/)
 
-👤 **Author2**
+👤 **Gordon Otieno**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@github](https://github.com/gordonotieno)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/gordonotieno/)
+
+👤 **Alphayo Wakarindi**
+
+- GitHub: [@github](https://github.com/alphayowakarindi)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
