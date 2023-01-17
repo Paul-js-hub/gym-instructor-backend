@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   # root "articles#index"
   namespace :api do
     namespace :v1 do
-      resources :users
+      resources :users, only: [:create]
+      post "auth/login", to: "users#login"
     end
   end
 end
