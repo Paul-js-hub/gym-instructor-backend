@@ -1,5 +1,5 @@
 class ServicesController < ApplicationController
-  before_action :set_service, only: %i[ show update destroy ]
+  before_action :set_service, only: %i[show update destroy]
 
   # GET /services
   def index
@@ -39,13 +39,14 @@ class ServicesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_service
-      @service = Service.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def service_params
-      params.require(:service).permit(:title, :duration, :class_time, :fee, :image)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_service
+    @service = Service.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def service_params
+    params.require(:service).permit(:title, :duration, :class_time, :fee, :image)
+  end
 end
