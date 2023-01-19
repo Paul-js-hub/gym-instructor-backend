@@ -3,19 +3,21 @@ class Api::V1::ReservationsController < ApplicationController
 
   # GET /reservations
   def index
-    @reservations = Reservation.all
+    @user_reservations = Reservation.where(user_id:params[:user_id])
 
-    render json: @reservations
+    render json: @user_reservations
   end
 
   # GET /reservations/1
   def show
+    @reservation = Reservation.find(params:[:id])
     render json: @reservation
   end
 
   # POST /reservations
   def create
     @reservation = Reservation.new(reservation_params)
+    @reservation.user_id = params[:user_id]
 
     if @reservation.save
       render json: @reservation, status: :created, location: @reservation
@@ -24,18 +26,11 @@ class Api::V1::ReservationsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /reservations/1
-  def update
-    if @reservation.update(reservation_params)
-      render json: @reservation
-    else
-      render json: @reservation.errors, status: :unprocessable_entity
-    end
-  end
-
   # DELETE /reservations/1
   def destroy
+    @reservation = Reservation.find(params[:id])
     @reservation.destroy
+    render json: { reservation: @reservation, message: 'Reservation successfully deleted' }
   end
 
   private
@@ -47,6 +42,6 @@ class Api::V1::ReservationsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def reservation_params
-    params.require(:reservation).permit(:city, :start_date)
+    params.require(:reservation).permit(:city, :start_date,:service_id)
   end
 end
