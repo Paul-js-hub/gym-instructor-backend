@@ -1,6 +1,6 @@
 class Api::V1::ServicesController < ApplicationController
   before_action :set_service, only: %i[show update destroy]
-
+  skip_before_action :authenticate_request, only: %i[index]
   # GET /services
   def index
     @services = Service.all
