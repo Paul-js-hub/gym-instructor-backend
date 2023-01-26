@@ -36,7 +36,8 @@
 
 > Describe your project in 1 or 2 sentences.
 
-**[your_project__name]** is a...
+**[Gym instructor]** is an api end point for a react gym web app to book appointment for different gym
+  classes like Yoga.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -69,9 +70,9 @@
 
 > Describe between 1-3 key features of the application.
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **[Adding a Gym service]**
+- **[Register and login using a username]**
+- **[Reserving a gym service]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
